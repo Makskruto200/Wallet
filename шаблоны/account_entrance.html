@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заголовок страницы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        h1{color:brown;
+           font-size:100px;
+font-family: 'Koulen', cursive;}
+        #menu{background:red;
+            font-size:50px;}
+        p{font-size:50px;}
+        a{font-size:50px;}
+       
+      
+        
+        
+    </style>
+    <center><h1>duck wallet🦆👜</h1></center>
+   <center><h1>Аккаунт</h1></center>
+   <center><h3>{{adress}}</h3></center>
+   <center><h3>Баланс</h3></center>
+   <center><h3>{{balance}}</h3></center>
+   <center><a href="/account/send/{{secret}}">Отправить</a></center>
+<center><a href="/promocode/create/{{secret}}">Создать промокод</a></center>
+<center><a href="/promocode/activate/{{secret}}">Активировать промокод</a></center>
+<center><a href="/chest/{{secret}}">Сундук</a></center>
+   <center>Транкзации</center>
+   {%for i in transactions%}
+				<center>id:{{i[0]}}</center>
+     <center>Отправитель:{{i[2]}}</center>
+     <center>Получатель:{{i[1]}}</center>
+     <center>Дата:{{i[3]}}</center>
+     <center>Сумма:{{i[4]}}</center>
+     
+     <hr>
+				{%endfor%}
+				
+   
+   
+    
+</body>

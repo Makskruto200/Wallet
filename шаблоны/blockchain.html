@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заголовок страницы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        h1{color:brown;
+           font-size:100px;
+font-family: 'Koulen', cursive;}
+        #menu{background:red;}
+       
+      
+        
+        
+    </style>
+    <h1>duck wallet🦆👜</h1>
+    <div id="menu">
+      <p><a href="">Аккаунт</a></p>
+      <p><a href="">Центр поддержки</a></p> 
+       <p><a href="">Новости</a></p> 
+       </div>
+       <h1>Блокчеин</h1>
+       {%for i in transactions%}
+				<center>id:{{i[0]}}</center>
+     <center>Отправитель:{{i[2]}}</center>
+     <center>Получатель:{{i[1]}}</center>
+     <center>Дата:{{i[3]}}</center>
+     <center>Сумма:{{i[4]}}</center>
+     
+     <hr>
+				{%endfor%}
+        
+</body>
+</html>
+
+
+
+
+
